@@ -1,0 +1,55 @@
+
+body{
+  background-color: #e61d2a;;   
+}
+/* body{
+  background-color: #e0e0e0;   
+}  */
+.centered{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.mainPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "header header" 
+  "bottleImg logo"
+  "bottleImg grayColumn"
+  "bottleImg grayColumn"
+  "greenColumn greenColumn";
+}
+.header{
+  grid-area: header;
+  color: #e61d2a;
+}
+.bottleImg{
+  grid-area: bottleImg;
+}
+
+.logo{
+  grid-area: logo;
+}
+.grayColumn{
+  grid-area: grayColumn;
+}
+.greenColumn{
+  grid-area: greenColumn;
+}
+@media only screen and (min-width: 786px) {
+  .mainPage{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "bottleImg header header " 
+    "bottleImg header header"
+    "bottleImg logo grayColumn"
+    "greenColumn greenColumn grayColumn ";
+  }
+  
+
+}
